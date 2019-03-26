@@ -1,0 +1,28 @@
+// to delete an object.
+kubectl delete deployment client-deployment
+
+kubectl get storageclass
+
+// get all persistent volume created by app
+kubectl get pv
+
+// get all persistent volume claim
+kubectl get pvc
+
+
+// this "pgpassword" is what we refer in the {postgres-deploment,server-deployment}.yaml, 
+// here "PGPASSWORD" is the key that we refer in the server-deployment as the "key"; this could have //been any thing like "MYPASSWORD" and then refer the same in the server-deployment.yaml file 
+// (sec 14, lec 209)
+kubectl create secret generic pgpassword --from-literal PGPASSWORD=12345asdf
+kubectl get secrets
+
+errors:
+1) for: "k8s/worker-deployment.yaml": cannot convert int64 to string
+answer: env variables should be in string format.
+
+this is the one we're using https://github.com/kubernetes/ingress-nginx led by kubernetes community
+and this is the one https://github.com/nginxinc/kubernetes-ingress by nginx company. 
+
+
+study up ingress-nginx (lect 215)
+https://www.joyfulbikeshedding.com/blog/2018-03-26-studying-the-kubernetes-ingress-system.html
