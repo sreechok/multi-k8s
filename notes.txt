@@ -26,3 +26,13 @@ and this is the one https://github.com/nginxinc/kubernetes-ingress by nginx comp
 
 study up ingress-nginx (lect 215)
 https://www.joyfulbikeshedding.com/blog/2018-03-26-studying-the-kubernetes-ingress-system.html
+
+
+sec 16, lec 229 - to start the google cloud to spin up k8s.
+lec 230, contains clean up of the resources on the gcp.
+
+// to have travis encrypt the file, first need ruby, then install travis.
+docker run -it -v $(pwd):/app ruby:2.3 sh
+
+// to encrypt the file within the docker container.
+travis encrypt-file service-account.json -r sreechok/multi-k8s
